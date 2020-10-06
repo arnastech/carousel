@@ -1,0 +1,226 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+// colors
+ $blue: #3c388b;
+ $orange: #f15c23;
+ $white: #FFF;
+
+//  breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1500px;
+$xxl: 3200px;
+
+
+body {
+    font-family: myriad-pro;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.container {
+    @media(max-width: $sm){
+        width: 90%;
+    }
+}
+
+#carousel-home {
+    // margin-top: 100px;
+    position: relative;
+    .left-sidebar {
+        position: absolute;
+        top: 30px;
+        bottom: 0;
+        left: -160px;
+        display: flex;
+        flex-direction: column; 
+        @media(max-width: $xl){
+            left: -100px;
+        }
+        @media(max-width: $md){
+            left: -85px;
+        }
+        @media(max-width: $sm){
+            left: -62px;
+            top: 100px;
+        }
+        .social {
+            display: flex;
+            flex-direction: column;
+            flex: 3;
+            @media(max-width: $sm){
+                flex: 1;
+            }
+        }
+        .app-sidebar {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            .app-text {
+                color: $orange;
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                -o-transform: rotate(270deg);
+                -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 2px;
+                margin-top: 40px;
+            }
+        }
+        img {
+            margin-bottom: 10px;
+            -webkit-transform: scale(0.55); /* Saf3.1+, Chrome */
+            -moz-transform: scale(0.55); /* FF3.5+ */
+                -ms-transform: scale(0.55);  
+              -o-transform: scale(0.55); /* Opera 10.55+ */
+                 transform: scale(0.55);
+            }
+    }
+    #carousel-main {
+        .carousel-inner {
+            overflow: visible;
+        }
+        .carousel-item {
+            position: relative;
+            background-color: $blue;
+            border-radius: 10px;
+            padding: 10%;
+            margin-top: 100px;
+            margin-bottom: 110px;
+            min-height: 400px;
+            overflow: visible;
+            box-shadow: 8px 13px 30px 0px rgba(0, 0, 0, 0.14);
+            @media(max-width: $xl){
+                height: auto;
+                min-height: unset;
+                margin-bottom: 100px;
+            }
+            @media(max-width: $lg){
+                padding: 6%;
+                margin-bottom: 90px;
+            }
+            @media(max-width: $md){
+                padding: 6%;
+                margin-bottom: 70px;
+            }
+            @media(max-width: $sm){
+                min-height: 380px;
+                padding: 6%;
+                margin-bottom: 30px;
+            }
+            .slide-number {
+                color: $orange;
+                font-size: 20px;
+            }
+            .title {
+                font-size: 42px;
+                color: $white;
+                @media(max-width: $lg){
+                    font-size: 30px;
+                }
+                @media(max-width: $md){
+                    font-size: 25px;
+                }
+            }
+            .description {
+                margin-top: 15px;
+                font-size: 16px;
+                color: $white;
+                @media(max-width: $md){
+                    font-size: 14px; 
+                }
+            }
+            .image {
+                @media(max-width: $sm){
+                    text-align: center;
+                    margin-left: 10px;
+                } 
+            }
+            .slide-image {
+                position: absolute;
+                top: -190px;
+                max-width: 120%;
+                @media(max-width: $xl){
+                    top: -160px;
+                    max-width: 125%;
+                }
+                @media(max-width: $lg){
+                    top: -87px;
+                    max-width: 104%;
+                }
+                @media(max-width: $md){
+                    top: -72px;
+                    max-width: 89%;
+                }
+                @media(max-width: $sm){
+                    position: relative; 
+                    top: 0;
+                    max-width: 50%;
+                }
+            }
+        }
+        .carousel-controls {
+            position: relative;
+            .carousel-control-next, .carousel-control-prev {
+                opacity: 1;
+                width: 6%; 
+            }
+            img {
+                width: 80%;
+                @media(max-width: $sm){
+                    width: 100%;
+                }
+            }
+        }
+        .carousel-indicators {
+            position: relative;
+            margin-right: 10%;
+            margin-left: 10%;
+            bottom: 10px;
+
+        }
+        .carousel-indicators li {
+            background-color: $blue;
+            color: $orange;
+            width: 100%; 
+            height: 2px;
+            margin-right: 0px;
+            margin-left: -2px;
+            opacity: 1;
+            text-indent: 0px;
+            span {
+                display: none;
+                position: absolute;
+                top: -30px;
+                @media(max-width: $lg){
+                    top: -20px;
+                    font-size: 18px;
+                }
+                @media(max-width: $sm){
+                    top: -15px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .carousel-indicators .active {
+            span{
+                display: block;
+            }
+        }
+        .carousel-indicators .active { 
+            height: 6px;
+            margin-top: -2px;
+        }
+        .next-img {
+            -webkit-transform:rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg); 
+        }
+    }
+}
