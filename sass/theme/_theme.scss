@@ -19,6 +19,11 @@ body {
     font-style: normal;
     font-size: 22px;
 }
+.post img {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+  }
 
 .container {
     @media(max-width: $sm){
@@ -100,6 +105,7 @@ body {
                 margin-bottom: 100px;
             }
             @media(max-width: $lg){
+                min-height: 232px;
                 padding: 6%;
                 margin-bottom: 90px;
             }
@@ -134,32 +140,27 @@ body {
                     font-size: 14px; 
                 }
             }
-            .image {
-                @media(max-width: $sm){
-                    text-align: center;
-                    margin-left: 10px;
-                } 
-            }
             .slide-image {
                 position: absolute;
-                top: -190px;
-                max-width: 120%;
+                top: -169px;
                 @media(max-width: $xl){
-                    top: -160px;
-                    max-width: 125%;
+                    top: -136px;
+                    max-width: 87%;
                 }
                 @media(max-width: $lg){
-                    top: -87px;
-                    max-width: 104%;
+                    top: -76px;
+                    max-width: 77%;
                 }
                 @media(max-width: $md){
-                    top: -72px;
-                    max-width: 89%;
+                    top: -68px;
+                    max-width: 75%;
                 }
                 @media(max-width: $sm){
                     position: relative; 
                     top: 0;
                     max-width: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
         }
